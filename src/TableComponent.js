@@ -1,5 +1,11 @@
 // TableComponent.js
 
+// //
+// import logo from './img/logo.svg';
+// import logo2 from './img/logo2.svg';
+// import logo3 from './img/mukku.png';
+// import logo4 from './img/gachaDino.ico';
+
 import React, { Component } from 'react';
 import TableRows from './TableRows';
 
@@ -10,16 +16,24 @@ class TableComponent extends Component {
             lists: [
                 {
                     name: 'Gachapin',
-                    value: 'Coo Dino'
+                    value: './img/logo.svg',
+                    id: 1
                 },
                 {
                     name: 'Mukku',
-                    value: 'Coo mop'
+                    value: './img/mukku.png',
+                    id: 2
                 },
                 {
-                    name: 'MelonBear',
-                    value: 'Yummy Tummy'
-                }]
+                    name: 'React',
+                    value: './img/logo2.svg',
+                    id: 3
+                },
+                {
+                    name: 'GachaDino',
+                    value: './img/gachaDino.ico',
+                    id: 4
+                },]
         }
     }
     render() {
@@ -27,14 +41,16 @@ class TableComponent extends Component {
             <table>
                 <thead>
                 <tr>
-                    <td>Name</td>
-                    <td>Value</td>
+                    <td><b>Name</b></td>
+                    <td><b>Value</b></td>
                 </tr>
                 </thead>
                 <tbody>
-                {this.state.lists.map(list => {
-                    return <TableRows name={list.name} value={list.value} />
-                })}
+                {
+                    this.state.lists.map(list => {return <TableRows name={list.name}
+                                                                    value={list.value}
+                                                                    key={list.id} />})
+                }
                 </tbody>
             </table>
         );
