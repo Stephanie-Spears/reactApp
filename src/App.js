@@ -34,9 +34,7 @@ class App extends Component {
                 <img src={logo2} className="App-logo" alt="logo" />
             </Delay>
 
-            {/*<Delay wait={5000}>*/}
                 <img src={logo} className="App-logo" alt="logo" />
-            {/*</Delay>*/}
 
             <Delay wait={5000}>
             <img src={logo2} className="App-logo" alt="logo" />
@@ -65,5 +63,7 @@ class App extends Component {
   }
 
 }
+
+
 
 export default App;
